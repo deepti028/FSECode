@@ -1,0 +1,95 @@
+.myForm {
+    display: flex;
+    width: 20vw;
+    margin: auto;
+    flex-direction: column;
+    padding-top: 1em;
+   }
+
+   mat-card {
+    height: 65vh;
+    width: 27vw !important;
+    display: flex !important;
+    margin: auto;
+    text-align: center;
+    margin-top: 2em;
+    flex-direction: column !important;
+    background-color:  lightskyblue;
+}
+
+mat-card-title {
+    text-align: center;
+    padding-top: 2em;
+    font-size: 1.2em;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+}
+mat-form-field {
+    display: initial !important;
+}
+mat-card-content {
+    align-items: center;
+    margin-bottom: 0px !important;
+}
+
+.image {
+    height: 95vh;
+    width: 105vw;
+    filter: blur(8px);
+   -webkit-filter: blur(8px);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.bg-text {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+  }
+
+mat-card-header {
+    display: initial !important;
+    text-align: center;
+    border: 1px solid black;
+    color: darkorchid;
+    background-color: deepskyblue;
+    padding-bottom: 15px;
+}
+
+.matInputdata {
+    margin-left: 3px;
+    font-size: 1.2em;
+    color: darkorchid;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+  }
+
+  .mat-raised-button {
+      /* color: white; */
+      font-size: 1.2em;
+     font-family: ACambria, Cochin, Georgia, Times, Times New Roman, serif;
+      
+  }
+
+  .register-users {
+    background-color: deepskyblue;
+    color: darkorchid;
+    border-radius: 4px;
+    width: 8em;
+    margin-left: 6em;
+   font-family: ACambria, Cochin, Georgia, Times, Times New Roman, serif;
+  }
+
+  .iconNow {
+      font-weight: bold;
+      font-size: 1.4em;
+  }

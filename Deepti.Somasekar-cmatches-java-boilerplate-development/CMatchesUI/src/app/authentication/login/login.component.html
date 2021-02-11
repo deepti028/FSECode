@@ -1,0 +1,33 @@
+<div>
+<img mat-card-image class="image" src="assets/images/cricket.png" alt ="cricket"></div>
+<div class="bg-text">
+<mat-card>
+  <mat-card-header>
+      <!-- <mat-card-title>
+          <img mat-card-image class="image-bgm" src="assets/images/ball1.png" alt ="balllogo"> </mat-card-title> -->
+    <mat-card-title class="login">
+        CMatches Login</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form class="myForm">
+      <mat-form-field>
+        <mat-label class="label">Username</mat-label>
+        <mat-icon matPrefix>person</mat-icon>
+        <input matInput id="username" class="matInputdata" [(ngModel)]="user.userName" name="username" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label class= "label">Password</mat-label>
+        <mat-icon matPrefix>lock</mat-icon>
+        <input matInput id ="password" class ="matInputdata" type="password" name = "password" [(ngModel)]="user.password" placeholder="Enter password"
+        [formControl]="pwdFormControl">
+        <mat-error *ngIf="pwdFormControl.invalid">{{getPwdErrorMessage()}}</mat-error>
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+  <button mat-raised-button color="primary" class="common-button click-now" (click)="login()">Login</button>
+  <button mat-raised-button color="primary" class="common-button"[routerLink]="['/register']">Register</button>
+</mat-card-actions>
+</mat-card>
+</div>

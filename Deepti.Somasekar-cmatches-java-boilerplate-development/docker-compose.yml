@@ -1,0 +1,47 @@
+version: '3'
+services:
+  authservice:
+    image: deepti028/auth-service:v1
+    # need to create image and push in docker hub
+    restart: always
+    network_mode: host
+    container_name: authServiceCon
+    depends_on:
+      - mysql
+    ports:
+      - 9000:9000
+
+  favouriteservice:
+    image:  deepti028/favourite-service:v1
+    restart: always
+    network_mode: host
+    container_name: favouriteServiceCon
+    depends_on:
+      - mongo
+    ports:
+      - 8086:8086
+
+  mysql:
+    image: mysql:5.5
+    ports:
+      - 3306:3306
+    container_name: mysql_container
+    network_mode: host
+    environment:
+      MYSQL_DATABASE: UserDb
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_PASSWORD: root
+
+  angular:
+    image: deepti028/cmatches-ui:v1
+    network_mode: host
+    container_name: angular-docker
+    ports:
+      - 8080:8080
+
+  mongo:
+    image: mongo:3.4-xenial
+    ports:
+      - "27017:27017"
+    container_name: mongo
+    network_mode: host

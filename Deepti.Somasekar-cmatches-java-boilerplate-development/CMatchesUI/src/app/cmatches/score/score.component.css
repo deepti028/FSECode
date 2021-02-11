@@ -1,0 +1,78 @@
+.match-thumbnail {
+    height: 40vh;
+    width: 40vw;
+    /* margin: 1.5em;
+     */
+     background-color: darkseagreen;
+     margin-left: 26em;
+     margin-top: 3em;
+    text-align: center;
+    flex-direction: column;
+    border: 2px solid black;
+}
+
+.bgm {
+    background-color: aliceblue;
+}
+
+.bg-img {
+    height: 65vh;
+    width: 40vw;
+    background: url('src/assets/images/grass.png') no-repeat;
+    display: block;
+}
+
+.mat-card-header {
+    display: flex;
+    flex-direction: column;
+    font-family: ACambria, Cochin, Georgia, Times, Times New Roman, serif;
+      background-color: darkgreen;
+      color: antiquewhite;
+}
+.matchcontent {
+    font-family: ACambria, Cochin, Georgia, Times, Times New Roman, serif;
+    margin: auto;
+}
+.data {
+    color: darkgreen;
+}
+
+.match-actions {
+    margin-top: 3em;
+}
+.mat-mini-fab {
+    background-color:darkred;
+    margin-left: 4vh;
+}
+
+.common-button {
+    background-color: darkgreen;
+    color: antiquewhite;
+    border-radius: 4px;
+    width: 12em;
+    /* margin-left: 4em; */
+   font-family: ACambria, Cochin, Georgia, Times, Times New Roman, serif;
+}
+
+.btn-now {
+    margin-right: 8px !important;
+}
+
+.image {
+    height: 9vh;
+    margin: auto;
+    width: 4vw;
+    text-align: left;
+    /* margin-left: 0em; */
+
+}
+
+/* .mat-raised-button {
+  margin: 0px !important;
+    
+} */
+
+.style-img {
+    align-items: left;
+    text-align: left;
+}

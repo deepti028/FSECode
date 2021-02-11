@@ -1,0 +1,8 @@
+  <app-header></app-header>
+    <!-- <button mat-raised-button color="primary" class="common-button btn-now" (click)="backClicked()">BACK</button> -->
+<div class="bgm">
+  <app-card class="width100" *ngFor="let match of favouriteMatches"
+  [match]=match [favoriteList]=favoriteList
+  (deleteFromFavouriteList)="deleteFromFavouriteList($event)"
+  (updateFavouriteComments)="updateComments($event)"></app-card>
+</div>

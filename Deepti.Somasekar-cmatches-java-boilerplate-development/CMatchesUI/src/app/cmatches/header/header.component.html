@@ -1,0 +1,11 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <img class="image" src="assets/images/Cricket-logo.png">
+    <button class="mat-button-match" mat-button [routerLink]="['/new']">Upcoming Matches</button>
+    <button class="mat-button-fav" mat-button [routerLink]="['/old']">Past CricCalendar</button>
+    <button class="mat-button-fav" mat-button [routerLink]="['/score']">Score</button>
+    <button class="mat-button-fav" mat-button [routerLink]="['/favourites']">Favourites</button>
+    <!-- <button class="mat-button-fav" mat-button>Player Statistics</button> -->
+    <button class="mat-button-logout" mat-button [routerLink] ="['/login']">Logout</button>
+  </mat-toolbar-row>
+</mat-toolbar>

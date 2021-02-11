@@ -1,0 +1,44 @@
+<app-header></app-header>
+ <!-- <div>
+ <img mat-card-image class="image" src="assets/images/cricket.png" alt ="cricket"></div>  -->
+<div class="container height400">
+    <div class="mat-elevation-z8 height-class">
+    <h1 class="style-head">PLAYERS LIST</h1>
+    <!-- <pre>{{dataSource | json}}</pre> -->
+    <table mat-table [dataSource]="dataSource" class="table-wrapper input-width tab-pad" matSort>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row;columns: displayedColumns" (click)="onClick(row)" ></tr>
+            <ng-container matColumnDef="pid">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                <div>
+                    <span class="tab-header">ID</span>
+                </div>
+            </th>
+            <td mat-cell *matCellDef="let element">{{element.pid}}</td>
+            <p>data</p>
+        </ng-container>
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                <div class="column">
+                    <span class="tab-header">PLAYER NAME</span>
+                </div>
+            </th>
+            <td mat-cell *matCellDef="let element">{{element.name}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="view">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                <div class="column">
+                    <span class="tab-header">Player Information</span>
+                </div>
+            </th>
+            <td mat-cell *matCellDef="let element">
+                <button type="button" class="btn btn-success" (click)="onClick(row)">View Player Details</button>
+            </td>
+        </ng-container>
+
+    </table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+    <!-- <app-statistics [id]= dashboardModel.pid></app-statistics> -->
+</div>
+</div>

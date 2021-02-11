@@ -1,0 +1,53 @@
+<div *ngIf="!favoriteList"><app-header></app-header>
+</div>
+<div class="container">
+<mat-card class="match-thumbnail">
+        <div class="bg-img">
+    <mat-card-header>
+        <mat-card-title>
+            <h2 *ngIf="match">{{match["team-1"]}} vs {{match["team-2"]}}</h2>
+            <h3>Match Started? {{match?.matchStarted}}</h3>
+        </mat-card-title>
+        <mat-card-subtitle>
+            <h3>Date</h3> {{match?.date | date}}
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content class="matchcontent">
+        Type: {{match?.type | titlecase}}
+        <br>
+        <br> Squad: {{match?.squad}}
+        <br>
+        <br>
+        <h3 class="data" *ngIf="match?.toss_winner_team">
+            Toss-winner-team: {{match?.toss_winner_team}}
+            <br>
+            <br>
+            </h3>
+            <h3 class="data" *ngIf="match?.winner_team">
+             Winner Team: {{match?.winner_team}}
+            <br>
+            <br>
+            </h3>
+    </mat-card-content>
+    <mat-card-actions class="match-actions">
+        <button mat-mini-fab class="addButton" *ngIf="!favoriteList"  matTooltip="Add to Favorite" (click)="addToFavourite(match)">
+          <mat-icon > <i class="material-icons">favorite</i></mat-icon>
+        </button> 
+    
+        <!-- <button class="updatebutton" *ngIf="favoriteList" matTooltip="Update Comments"
+         (click)="updateComments()"     mat-mini-fab>
+          <mat-icon>
+            <i class="material-icons">create</i> </mat-icon>
+        </button> -->
+    
+        <button class="deletebutton" *ngIf="favoriteList" matTooltip="Delete From FavoriteList"
+        (click)="deleteButtonClick(match)" mat-mini-fab>
+          <mat-icon>
+            <i class="material-icons">delete</i> </mat-icon>
+        </button>
+    
+      </mat-card-actions>
+    <button mat-raised-button color="primary" *ngIf="!favoriteList" class="common-button btn-now" (click)="openSquad()">SQUAD</button>
+</div>
+</mat-card>
+</div>

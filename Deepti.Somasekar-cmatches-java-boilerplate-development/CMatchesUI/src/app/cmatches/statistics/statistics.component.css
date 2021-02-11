@@ -1,0 +1,53 @@
+.match-thumbnail {
+    height: 90vh;
+    width: 75vw;
+    /* margin: 1.5em;
+     */
+     background-color: aquamarine;
+     margin-left: 9em;
+     margin-top: 1em;
+    text-align: center;
+    flex-direction: column;
+}
+
+/* .common-button {
+background-color: aliceblue;
+} */
+
+.bg-img {
+    height: 90vh;
+    width: 75vw;
+    background: url('src/assets/images/grass.png') no-repeat;
+    display: block;
+}
+
+.mat-card-header {
+    display: flex;
+    flex-direction: column;
+    font-family: 'josefin sans', 'sans-serif';
+}
+.matchcontent {
+    font-family: 'josefin sans', 'sans-serif';
+    margin: auto;
+}
+.data {
+    color: darkgreen;
+}
+.mat-mini-fab {
+    background-color:darkred;
+    margin-left: 4vh;
+}
+
+.image {
+    height: 15vh;
+    margin: auto;
+    width: 5vw;
+    text-align: left;
+    /* margin-left: 0em; */
+
+}
+
+.style-img {
+    align-items: left;
+    text-align: left;
+}

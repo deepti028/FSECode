@@ -1,0 +1,24 @@
+<app-header>
+</app-header>
+<div class="bgm">
+<mat-card class="match-thumbnail">
+    <mat-card-header>
+        <mat-card-title>
+          <!-- <pre>{{dashboardModel.scoreDetails | json}}</pre> -->
+            <h2 *ngIf="dashboardModel.scoreDetails">{{dashboardModel.scoreDetails["team-1"]}} vs {{dashboardModel.scoreDetails["team-2"]}}</h2>
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="matchcontent">
+    </mat-card-content>
+    <mat-card-actions class="match-actions">
+        <!-- <button mat-mini-fab class="addButton" matTooltip="Add to favourite" click="addToFav(match)">
+            <mat-icon matPrefix><i class="material-icons">favorite</i></mat-icon>
+        </button> -->
+  <button mat-raised-button color="primary" class="common-button btn-now" (click)="openSquad()">SQUAD</button>
+  <!-- <button mat-raised-button color="primary" class="common-button" >PLAYER STATISTICS</button> -->
+  <button mat-raised-button color="primary" class="common-button" (click)="openSummary()">MATCH SUMMARY</button>
+
+    </mat-card-actions>
+</mat-card>
+</div>
+

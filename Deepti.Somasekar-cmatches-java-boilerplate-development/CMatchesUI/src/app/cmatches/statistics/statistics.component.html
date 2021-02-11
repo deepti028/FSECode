@@ -1,0 +1,31 @@
+<app-header></app-header>
+<mat-card class="match-thumbnail">
+  <div class="bg-img">
+<mat-card-header>
+  <mat-card-title>
+      <h2 *ngIf="playerDetails">
+        <img mat-card-image class="image" src="{{playerDetails.imageURL}}" alt ="cricket">
+      </h2>
+  </mat-card-title>
+  <mat-card-subtitle>
+  </mat-card-subtitle>
+</mat-card-header>
+<mat-card-content class="matchcontent" *ngIf="playerDetails">
+  <b>Profile</b> : {{playerDetails.profile}}
+  <br><br> <b>Batting Style</b>: {{playerDetails.battingStyle}}
+  <br><br>  <b>Bowling Style</b>: {{playerDetails.bowlingStyle}}
+  <br><br>  <b> Major Teams</b>: {{playerDetails.majorTeams}}
+  <br><br>  <b>Current Age</b>: {{playerDetails.currentAge}}
+  <br><br>  <b>Date of Birth</b>: {{playerDetails.born}}
+  <br><br>  <b>FullName</b>: {{playerDetails.fullName}}
+  <br><br>  <b>Name</b>: {{playerDetails.name}}
+  <br><br>  <b>Country</b>: {{playerDetails.country}}
+  <br><br>  <b>PlayingRole</b>: {{playerDetails.playingRole}}
+  <br><br>  <b>v</b>: {{playerDetails.v}}
+</mat-card-content>
+<mat-card-actions class="match-actions">
+<button mat-raised-button color="primary" class="common-button btn-now" (click)="backClicked()">BACK</button>
+</mat-card-actions>
+</div>
+</mat-card>
+
